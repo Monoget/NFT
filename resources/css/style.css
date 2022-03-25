@@ -1,0 +1,875 @@
+/* Base Style */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: Gotham;
+  scroll-behavior: smooth;
+}
+.section-spacing {
+  padding: 6rem 0;
+}
+.section-title {
+  text-align: center;
+  padding-bottom: 3rem;
+}
+
+.section-title h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #163135;
+  padding-bottom: 1rem;
+}
+
+.section-title h6 {
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #505050;
+}
+.launch-content h3 {
+  font-size: 2.5rem;
+  color: #ffffff;
+}
+
+/* Gilroy Font */
+
+@font-face {
+  font-family: Gotham;
+  src: url(../font/GothamProLight.ttf);
+  font-weight: 300;
+}
+@font-face {
+  font-family: Gotham;
+  src: url(../font/GothamPro.ttf);
+  font-weight: 400;
+}
+@font-face {
+  font-family: Gotham;
+  src: url(../font/GothamProMedium.ttf);
+  font-weight: 500;
+}
+@font-face {
+  font-family: Gotham;
+  src: url(../font/GothamProBold.ttf);
+  font-weight: 700;
+}
+
+/* Header Section CSS Start */
+
+.header-nav {
+  position: fixed;
+  width: 100%;
+  transition: all 0.3s ease-in-out;
+  z-index: 999;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 0;
+}
+.mobile-logo {
+  display: none;
+}
+
+.menu-icon {
+  font-size: 2.5rem;
+  color: #9496a4;
+  display: none;
+}
+nav .menu ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+nav .menu ul li {
+  list-style: none;
+  margin-left: 2rem;
+}
+nav .menu ul li a {
+  position: relative;
+  color: #797979;
+  text-decoration: none;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+}
+.menu-btn {
+  color: #6f89e9 !important;
+}
+.menu2 ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+.menu2 ul li {
+  list-style: none;
+}
+
+.menu2 ul li a {
+  text-decoration: none;
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+li.mobile-login {
+  display: none;
+}
+li.login {
+  padding: 0 1rem;
+  border-left: 2px solid #eeeeee;
+  border-right: 2px solid #eeeeee;
+}
+li.login a {
+  color: #6f89e9;
+}
+li.login a span {
+  font-weight: 400;
+  color: #797979;
+}
+
+li.search i {
+  font-size: 2rem;
+  color: #9496a4;
+  padding-left: 1rem;
+}
+
+/* Responsive CSS for Menu */
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .container {
+    display: block;
+    max-width: 100%;
+    margin: auto;
+  }
+
+  nav {
+    line-height: 70px;
+    display: flex;
+    justify-content: flex-start;
+  }
+  .logo {
+    padding-left: 3rem;
+  }
+
+  .menu-icon {
+    font-size: 2.5rem;
+    display: block;
+  }
+  .menu {
+    position: absolute;
+    left: -100%;
+    transition: all 0.3s ease-in-out;
+  }
+  .menu.active {
+    display: block !important;
+    left: 0;
+    width: 100%;
+  }
+
+  .menu ul {
+    display: block !important;
+    position: absolute;
+    background: #6f89e9;
+    width: 50%;
+    text-align: center;
+    top: 8rem;
+    left: 0;
+  }
+  nav .menu ul li a {
+    color: #fff !important;
+  }
+  .menu2 {
+    display: flex;
+    justify-content: flex-end !important;
+    text-align: center;
+    padding-left: 20rem;
+  }
+}
+@media (max-width: 767px) {
+  .container {
+    display: block;
+    max-width: 100%;
+    margin: auto;
+  }
+
+  nav {
+    line-height: 70px;
+    display: flex;
+    justify-content: flex-start;
+  }
+  .logo {
+    display: none;
+  }
+  .mobile-logo {
+    padding-left: 3rem;
+    display: block;
+  }
+  .menu-icon {
+    font-size: 2.5rem;
+    display: block;
+  }
+  .menu {
+    position: absolute;
+    left: -100%;
+    transition: all 0.3s ease-in-out;
+  }
+  .menu.active {
+    display: block !important;
+    left: 0;
+    width: 100%;
+  }
+
+  .menu ul {
+    display: block !important;
+    position: absolute;
+    background: #6f89e9;
+    width: 50%;
+    text-align: center;
+    top: 8rem;
+    left: 0;
+  }
+  nav .menu ul li a {
+    color: #fff !important;
+  }
+  .menu2 {
+    display: flex;
+    justify-content: flex-end !important;
+    text-align: right;
+  }
+  .menu2 .search {
+    display: none;
+  }
+  li.login {
+    display: none;
+  }
+  li.mobile-login {
+    display: block !important;
+  }
+
+  li.mobile-login a {
+    padding: 0 0.8rem;
+  }
+  li.mobile-login a:last-child {
+    border-left: 1px solid #eeeeee;
+  }
+}
+
+/* Header Section CSS End */
+
+/* Sidebar Section CSS Start */
+
+.sidebar-menu {
+  margin-top: 5rem;
+}
+.sidebar {
+  padding-right: 4rem;
+}
+.mobile-sidebar {
+  display: none;
+}
+.sidebar-menu h2 {
+  font-size: 2.8rem;
+  font-weight: 700;
+}
+.sidebar-menu ul {
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+  padding: 0 1rem;
+}
+.sidebar-menu ul li {
+  list-style: none;
+}
+
+.sidebar-menu ul li::before {
+  content: "\2022";
+  color: #6f89e9;
+  font-weight: bold;
+  display: inline-block;
+  width: 2em;
+  margin-left: -1em;
+}
+.sidebar-menu ul li a {
+  font-size: 1.8rem;
+  text-decoration: none;
+  color: #505050;
+}
+.social-media {
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+}
+.follow h2 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-top: 4rem;
+}
+.social-media a {
+  text-decoration: none;
+  display: block;
+}
+.social-media a {
+  font-size: 1.8rem;
+  color: #505050;
+  margin-bottom: 2rem;
+}
+
+.social-media a i {
+  width: 3.5rem;
+  height: 3.5rem;
+  color: #fff;
+  font-size: 2rem;
+  padding: 0.7rem 0.4rem;
+  text-align: center;
+  border-radius: 5rem;
+}
+i.facebook {
+  background: #3b5998;
+}
+i.twitter {
+  background: #55acee;
+}
+
+i.youtube {
+  background: #d22215;
+}
+
+i.discord {
+  background: #000000;
+}
+.pricing {
+  background: #f0f0f0;
+  margin-top: 4rem;
+  padding: 2rem 0;
+}
+
+.pricing a {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: #163135;
+  background: #ffffff;
+  padding: 1.2rem 4rem;
+  border-radius: 5rem;
+  margin: 2rem 3rem;
+}
+
+.pricing a span {
+  font-weight: 400;
+}
+
+a.pricing-button {
+  background: #6f89e9;
+  text-align: center;
+  color: #fff;
+}
+
+@media (min-width: 768px) and (max-width: 800px) {
+  .sidebar {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  .sidebar {
+    display: none;
+  }
+  .mobile-sidebar {
+    display: block;
+    padding: 0 0.5rem;
+  }
+}
+/* Sidebar Section CSS End */
+
+/* Hero Section CSS Start */
+
+.hero-wrapper {
+  background-image: url(../images/hero-bg.png);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10rem 0;
+}
+
+.hero-content h1 {
+  font-size: 4rem;
+  font-weight: 700;
+  color: #fff;
+  line-height: 5rem;
+  padding-left: 1.5rem;
+  border-left: 2px solid #6f89e9;
+}
+
+.social-share a {
+  font-size: 1.6rem;
+  font-weight: 300;
+  text-decoration: none;
+  color: #a7a7a7;
+}
+.share i {
+  background: #a7a7a7;
+  color: #fff;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 5rem;
+  text-align: center;
+  padding: 1rem;
+}
+.social-share a .facebook2,
+.social-share a .twitter2 {
+  background: #3b5998;
+  color: #fff;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 5rem;
+  text-align: center;
+  padding: 1rem;
+}
+.social-share a .twitter2 {
+  background: #55acee;
+  margin-left: 5rem;
+}
+.social-share {
+  padding-top: 1rem;
+}
+@media (max-width: 767px) {
+  .hero-wrapper {
+    background-image: url(../images/mobile-hero.png);
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem;
+  }
+  .hero-content h1 {
+    font-size: 2.5rem;
+    line-height: 3rem;
+  }
+  .hero-content h1 span {
+    font-size: 1.4rem;
+  }
+  .section-title h2 {
+    font-size: 2.4rem;
+  }
+  .launch-content {
+    text-align: center;
+  }
+  .launch-content h3 {
+    font-size: 2.4rem;
+  }
+  .get-nft,
+  .team-card {
+    margin-bottom: 5rem;
+  }
+}
+/* Hero Section CSS End */
+
+/* Launch Section HTML Start */
+
+::placeholder {
+  color: #fff;
+}
+
+.launch {
+  background: #6f89e9;
+  border-radius: 4rem;
+  overflow: hidden;
+}
+.launch-content {
+  padding-top: 5rem;
+  padding-right: 1.5rem;
+}
+.timer {
+  margin: 4rem 0;
+}
+.timer li {
+  list-style: none;
+  background: #8ca1ed;
+  padding: 1rem;
+  width: 7rem;
+  border-radius: 1rem;
+  text-align: center;
+}
+
+.timer li h5 {
+  font-size: 2.5rem;
+  color: #fff;
+  margin: 0;
+}
+
+.timer li p {
+  font-size: 1.6rem;
+  color: #fff;
+  margin: 0;
+}
+.launch-search {
+  padding-top: 1rem;
+}
+.launch-content h4 {
+  font-size: 1.8rem;
+  color: #fff;
+  padding-bottom: 1rem;
+}
+.launch-search input {
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  padding: 0.8rem 0;
+  border-radius: 5rem;
+  text-align: center;
+  font-size: 1.6rem;
+  color: #fff;
+}
+.launch-search input:focus {
+  outline: 0;
+}
+input.notify {
+  font-weight: 700;
+  background: #fff;
+  color: #6f89e9;
+  margin-left: 1rem;
+  padding: 0.8rem 2rem;
+}
+/* Launch Section HTML End */
+
+/* Charity Section CSS Start */
+
+section#Charity {
+  margin-top: 6rem;
+  border-left: 1px solid #6f89e9;
+  border-right: 1px solid #6f89e9;
+  border-top: 1px solid #7e7e7e52;
+  border-bottom: 1px solid #7e7e7e52;
+  padding: 6rem 0;
+}
+.counter li {
+  list-style: none;
+  width: 6rem;
+  background: #fff;
+  margin: 0 0.5rem;
+  padding: 1rem 0;
+  border: 1px solid #d0d6d7;
+  text-align: center;
+  font-size: 2.8rem;
+  font-weight: 700;
+  border-radius: 1rem;
+}
+
+.counter {
+  display: flex;
+  justify-content: center;
+}
+.number {
+  background: #e2e7fb !important;
+}
+.charity-price {
+  text-align: center;
+  padding: 3rem 0;
+}
+
+.charity-price h4 {
+  font-size: 1.8rem;
+  color: #163135;
+}
+
+.charity-price h4 span {
+  font-weight: 400;
+}
+.charity-buttons {
+  text-align: center;
+}
+
+.charity-buttons a {
+  display: block;
+  font-size: 1.8rem;
+  text-decoration: none;
+  color: #505050;
+}
+.charity-buttons {
+  text-align: center;
+}
+
+.charity-buttons a:last-child {
+  font-weight: 700;
+  color: #ffffff;
+  background: #6f89e9;
+  max-width: 30rem;
+  padding: 1.5rem;
+  border-radius: 5rem;
+  margin: auto;
+  margin-top: 2rem;
+}
+/* Charity Section CSS End */
+
+/* Roadmap Section CSS Start */
+
+.timeline {
+  max-width: 35rem;
+  margin: auto;
+}
+
+.timeline-body {
+  position: relative;
+  padding: 1rem 0;
+}
+
+.timeline-body::after {
+  position: absolute;
+  content: "";
+  width: 0.6rem;
+  height: 100%;
+  background: #6f89e9;
+  top: 0;
+  left: -3.1rem;
+  border-radius: 1rem;
+}
+
+.timeline-item {
+  position: relative;
+  margin-top: 5rem;
+}
+
+.timeline-item::after {
+  position: absolute;
+  content: "";
+  width: 3rem;
+  height: 3rem;
+  background: #f0f0f0;
+  border: 4px solid #6f89e9;
+  border-radius: 5rem;
+  top: 0;
+  left: -4.3rem;
+  z-index: 9;
+}
+
+p.time {
+  position: absolute;
+  left: -15rem;
+  text-align: center;
+  font-size: 2rem;
+  color: #163135;
+}
+h2.title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #163135;
+  padding-right: 5rem;
+}
+
+.content p {
+  font-size: 1.6rem;
+  color: #505050;
+  padding-top: 1rem;
+}
+
+@media (max-width: 767px) {
+  p.time {
+    position: relative;
+    left: 0rem;
+    text-align: left;
+  }
+  .timeline-item::after {
+    left: -5.3rem;
+  }
+  .timeline-item {
+    margin-left: 5rem;
+  }
+  .timeline-body::after {
+    left: 0.9rem;
+  }
+}
+
+/* Roadmap Section CSS End */
+
+/* NFT Collection Section CSS Start */
+
+.collection-buttons li {
+  list-style: none;
+  font-size: 1.8rem;
+  color: #505050;
+  margin: 0 1.5rem;
+  margin-bottom: 4rem;
+  cursor: pointer;
+}
+
+.collection-item {
+  max-width: 100%;
+}
+
+.collection-item img {
+  width: 100%;
+}
+
+.collection-item p {
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: #163135;
+  padding-top: 1rem;
+}
+[data-tab-content] {
+  display: none;
+}
+.tab-active[data-tab-content] {
+  display: block;
+}
+.item-active {
+  font-weight: 500 !important;
+  color: #6f89e9 !important;
+  border-bottom: 2px solid #6f89e9 !important;
+}
+
+/* NFT Collection Section CSS End */
+
+/* Get NFT Section CSS Start */
+
+.get-nft {
+  text-align: center;
+}
+
+.get-nft h4 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #163135;
+  padding: 1rem 0;
+}
+
+.get-nft p {
+  font-size: 1.5rem;
+  color: #505050;
+  padding-bottom: 3rem;
+}
+
+.get-nft a {
+  text-decoration: none;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #6f89e9;
+  border: 1px solid #6f89e9;
+  padding: 1rem 3rem;
+  border-radius: 5rem;
+}
+
+/* Get NFT Section CSS End */
+
+/* Team Section CSS Start */
+
+.team-card {
+  max-width: 100%;
+  text-align: center;
+}
+
+.team-card img {
+  width: 100%;
+}
+
+.team-card h3 {
+  font-size: 2rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #163135;
+  padding-top: 1rem;
+}
+
+.team-card h6 {
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: #505050;
+}
+.accordion-body {
+  font-size: 1.6rem;
+  color: #505050;
+}
+
+.accordion-item {
+  padding-top: 5rem;
+}
+
+/* Team Section CSS End */
+
+/* Footer Section CSS Start */
+
+#Footer {
+  padding-top: 6rem;
+}
+
+.footer-wrapper {
+  background: #292929;
+  padding: 4rem 0;
+}
+.footer-menu h4 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.footer-menu ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-menu ul li {
+  list-style: none;
+}
+
+.footer-menu ul li a {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-follow h4 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.footer-social a i {
+  font-size: 1.6rem;
+  color: #fff;
+  padding: 0 0.5rem;
+}
+.copyright {
+  background: #3a3a3a;
+  padding: 1rem;
+  text-align: center;
+}
+
+.copyright p {
+  font-size: 1.3rem;
+  font-weight: 300;
+  color: #fff;
+  padding: 0;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .footer-wrapper {
+    text-align: center;
+  }
+  .footer-menu ul {
+    display: block;
+  }
+  .footer-menu ul li {
+    padding-bottom: 1rem;
+  }
+  .footer-menu {
+    padding-top: 3rem;
+  }
+  .footer-follow {
+    padding-top: 3rem;
+  }
+}
+/* Footer Section CSS End */
